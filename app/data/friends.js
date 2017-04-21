@@ -1,5 +1,5 @@
 var friendsArray = [{
-  "name":"Dude",
+  "name":"Chica",
   "photo":"outdoor.jpeg",
   "scores":[
      5,

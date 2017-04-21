@@ -13,10 +13,12 @@ module.exports = function(app) {
 		var totalDifference = 0;
 		var allDifferences = [];
 
-		//Loop through all of the stored friends (minus one because the last stored friend is the current user)
+		//Loop through all -1 for current user
 		for (var i=0; i<(friends.length-1); i++){
 
-			//Loop through all of question values and sum total their subtracted absolute values
+			// found all this online for help
+
+			// loop through all the questions 
 			for (var j=0; j<10; j++){
 				totalDifference += Math.abs(friends[i].scores[j] - newFriend.scores[j]);
 			}
@@ -25,7 +27,7 @@ module.exports = function(app) {
 			totalDifference = 0;
 		}
 
-		//Give the smallest value in the array
+		//smallest value in the array
 		var bestMatch = friends[allDifferences.indexOf(Math.min.apply(null, allDifferences))];
 
 		res.send(bestMatch);
